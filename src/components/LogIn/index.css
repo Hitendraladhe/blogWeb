@@ -14,7 +14,7 @@ form{
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
-    padding: 3rem;
+    padding: 5rem;
 }
 form input{
     width: 15rem;
@@ -29,7 +29,7 @@ h4{
     margin-left: 10rem;
 }
 form button{
-    width: 7rem;
+    width: 6rem;
     height: 1.5rem;
     background-color: rgb(223, 35, 129);
     border: 1px goldenrod solid;

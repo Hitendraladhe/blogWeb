@@ -19,7 +19,7 @@ const App=()=>{
           <Route path="login" element={<LogIn />} />
           <Route path="addblog" element={<AddBlog />} />
           <Route path="blog/:id" element={<Blog />} />  
-          <Route path="blog/:id/blog/editBlog/:id" element={<EditBlog />} />    
+          <Route path="blog/editblog/:id" element={<EditBlog />} />    
           <Route path="*" element={<NotFound />} />      
       </Routes>
     </BrowserRouter>

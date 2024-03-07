@@ -44,7 +44,7 @@ const Blog = () => {
             <img src={blogData.img} className='blog-img' alt='blog-img' />
             <h3>Blog Title: {blogData.title}</h3>
             <div className='btnConBlog'>
-                <button ><Link to={`editBlog/${id}/`}>Edit</Link></button>
+                <button ><Link to={`/blog/editBlog/${id}/`} style={{color: "Black", textDecoration: "none"}}>Edit</Link></button>
                 <button onClick={(()=>onDeleteClick(id))}><Link to='/'>Delete</Link></button>
             </div>
             <p>{blogData.des}</p>

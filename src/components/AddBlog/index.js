@@ -32,7 +32,7 @@ const AddBlog =()=>{
       <>
        <div className='formContainer'>
          <form onSubmit={onSubmitForm}>
-            <button className='back'><Link to='/'>Back</Link></button>
+            <button className='back'><Link to='/' style={{color: "White", textDecoration: "none"}}>Back</Link></button>
             <h4>Add Blog</h4>
             <label htmlFor='title'>Title</label>
             <input onChange={onChangeHandle} id='title' name="title" />

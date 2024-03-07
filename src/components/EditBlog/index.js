@@ -29,7 +29,7 @@ const EditBlog =()=>{
       <>
        <div className='formContainer'>
          <form onSubmit={onSubmitForm}>
-            <button className='back'><Link to={`/blog/:${id}/`}>Back</Link></button>
+            <button className='back'><Link to={`/blog/:${id}s`} style={{color: "White", textDecoration: "none"}}>Back</Link></button>
           <h4>Edit Blog</h4>
             <label htmlFor='title'>Title</label>
             <input onChange={onChangeHandle} id='title' name="title" />

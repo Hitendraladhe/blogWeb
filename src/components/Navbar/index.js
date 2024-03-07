@@ -30,9 +30,9 @@ const Navbar =()=>{
          <li>Contact</li>   
         </ul>
         <ul className="lgUl">
-         <li><Link to='/'>home</Link></li>
-         <li><Link>about</Link></li> 
-         <li><Link>Contact</Link></li>   
+         <li><Link to='/' style={{color: "White", textDecoration: "none"}}>home</Link></li>
+         <li><Link style={{color: "White", textDecoration: "none"}}>about</Link></li> 
+         <li><Link style={{color: "White", textDecoration: "none"}}>Contact</Link></li>   
         </ul>
         
         <Popup trigger={

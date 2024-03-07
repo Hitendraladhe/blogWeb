@@ -50,7 +50,7 @@ const LogIn =()=>{
             <label htmlFor='password'>Password</label>
             <input onChange={onChangeHandle} id='password' name="password" />
             <button type='submit'>Submit</button>
-            <h6><Link to='/signup' className='Link'>Sign Up for new User</Link></h6>
+            <h6><Link to='/signup' className='Link' style={{color: "Black", textDecoration: "none"}}>Sign Up for new User</Link></h6>
          </form>
        </div>   
       </>

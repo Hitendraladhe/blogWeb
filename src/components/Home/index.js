@@ -42,10 +42,10 @@ class Home extends Component{
     return (
       <div className='container' >
         <Navbar/>
-        <h1>Daily Blogs</h1>
+        <h3>Daily Blogs</h3>
         <div className="con">
           {blogs.map(each=>(
-            <Link to={`/blog/${each._id}`} onClick={this.onClickBlog}>
+            <Link to={`/blog/${each._id}`} style={{color: "Black", textDecoration: "none"}} onClick={this.onClickBlog}>
              <div className='blogCon'>
               <img src={each.blog.img} className='img' alt='img'/>
               <p>Title: {each.blog.title}</p>
@@ -58,7 +58,7 @@ class Home extends Component{
           ))}
           
         </div>
-        <button className='addBtn' ><Link to='/addblog'>Add Post</Link></button>
+        <button className='addBtn' ><Link to='/addblog' style={{color: "White", textDecoration: "none"}}>Add Post</Link></button>
       </div>
   );
  }

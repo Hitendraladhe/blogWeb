@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import './index.css'
-import {Link } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 
 const SignUp =()=>{
-  
+  const navigate = useNavigate()
   const [user, setUser] = useState()
   const users = {
     username: "",
@@ -21,7 +21,10 @@ const SignUp =()=>{
   const onSubmitForm=async (e)=>{
     e.preventDefault()
     const res = await fetch("http://localhost:8000/SignUp", {method: "POST", body: JSON.stringify(user), headers:{'Content-Type': 'application/json'}});
-    
+    if(res.ok === true){
+      const auth = localStorage.setItem('user', JSON.stringify(user));
+       navigate('/');
+    }
   }
 
     return(

@@ -21,16 +21,18 @@ const AddBlog =()=>{
 
   const onSubmitForm= async(e)=>{
     e.preventDefault()
-    const data = await {blog:{...blog},  username: "Hiten",comment: "thik hai"};
+    const auth = JSON.parse(localStorage.getItem("user"));
+    console.log(auth.username)
+    const data = await {blog:{...blog},  username: auth.username,comment: auth.comment};
     await fetch('http://localhost:8000/AllBlogs/add', {method: "POST", body: JSON.stringify(data), headers:{'Content-Type': 'application/json'}});
-    console.log(data);
+    //console.log(data);
   }
 
     return(
       <>
        <div className='formContainer'>
          <form onSubmit={onSubmitForm}>
-            <button><Link to='/'>Back</Link></button>
+            <button className='back'><Link to='/'>Back</Link></button>
             <h4>Add Blog</h4>
             <label htmlFor='title'>Title</label>
             <input onChange={onChangeHandle} id='title' name="title" />

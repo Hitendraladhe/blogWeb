@@ -25,6 +25,15 @@ h4{
     text-align: center;
     margin-top: -10px;
 }
+.back{
+    width: 4rem;
+    height: 1.5rem;
+    background-color: rgb(223, 35, 129);
+    border: 1px goldenrod solid;
+    margin-top: -1rem;
+    color: aliceblue;
+    font-size: 1rem;
+}
 form button{
     width: 7rem;
     height: 1.5rem;

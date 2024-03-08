@@ -21,7 +21,7 @@ class Home extends Component{
   
 
   getAll=()=>{
-    fetch("http://localhost:8000/AllBlogs")
+    fetch("https://blogbackend-2.onrender.com/AllBlogs")
       .then(res => res.json())
       .then((rows) => {
         this.setState({ blogs: rows })

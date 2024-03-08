@@ -24,7 +24,7 @@ const AddBlog =()=>{
     const auth = JSON.parse(localStorage.getItem("user"));
     console.log(auth.username)
     const data = await {blog:{...blog},  username: auth.username,comment: auth.comment};
-    await fetch('http://localhost:8000/AllBlogs/add', {method: "POST", body: JSON.stringify(data), headers:{'Content-Type': 'application/json'}});
+    await fetch('https://blogbackend-2.onrender.com/AllBlogs/add', {method: "POST", body: JSON.stringify(data), headers:{'Content-Type': 'application/json'}});
     //console.log(data);
   }
 

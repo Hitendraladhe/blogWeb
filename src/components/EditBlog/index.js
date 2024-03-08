@@ -21,7 +21,7 @@ const EditBlog =()=>{
 
   const onSubmitForm=(e)=>{
     e.preventDefault()
-    fetch(`http://localhost:8000/AllBlogs/edit/${id}`, {method: "POST", body: JSON.stringify(blog), headers:{'Content-Type': 'application/json'}});
+    fetch(`https://blogbackend-2.onrender.com/AllBlogs/${id}`, {method: "POST", body: JSON.stringify(blog), headers:{'Content-Type': 'application/json'}});
     console.log(blog);
   }
 

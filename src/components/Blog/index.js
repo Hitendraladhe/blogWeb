@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 import { useParams, Link } from 'react-router-dom';
-import Footer from '../Footer'; 
+//import Footer from '../Footer'; 
 
 const Blog = () => {
     const [data, setData] = useState({});
@@ -11,7 +11,7 @@ const Blog = () => {
    
 
     const onDeleteClick = async(id) => {
-      await fetch(`http://localhost:8000/AllBlogs/delete/${id}`, {
+      await fetch(`https://blogbackend-2.onrender.com/AllBlogs/delete/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const Blog = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/AllBlogs/${id}/`);
+            const response = await fetch(`https://blogbackend-2.onrender.com/AllBlogs/${id}/`);
             if (!response.ok) {
                 throw new Error('Failed to fetch blog data');
             }
@@ -49,7 +49,7 @@ const Blog = () => {
             </div>
             <p>{blogData.des}</p>
             <h5>Blog By: {data.username}</h5>
-            <Footer/>
+           
         </div>
     );
 };

@@ -22,7 +22,7 @@ const LogIn =()=>{
 
   const onSubmitForm=async(e)=>{
     e.preventDefault()
-    const res = await fetch("http://localhost:8000/LogIn", {method: "POST", body: JSON.stringify(user), headers:{'Content-Type': 'application/json'}});
+    const res = await fetch("https://blogbackend-2.onrender.com/LogIn", {method: "POST", body: JSON.stringify(user), headers:{'Content-Type': 'application/json'}});
     console.log(res);
     
     //localStorage.setItem( 'hero', user)

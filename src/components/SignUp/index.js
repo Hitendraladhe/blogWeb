@@ -20,7 +20,7 @@ const SignUp =()=>{
 
   const onSubmitForm=async (e)=>{
     e.preventDefault()
-    const res = await fetch("http://localhost:8000/SignUp", {method: "POST", body: JSON.stringify(user), headers:{'Content-Type': 'application/json'}});
+    const res = await fetch("https://blogbackend-2.onrender.com/SignUp", {method: "POST", body: JSON.stringify(user), headers:{'Content-Type': 'application/json'}});
     if(res.ok === true){
       const auth = localStorage.setItem('user', JSON.stringify(user));
        navigate('/');

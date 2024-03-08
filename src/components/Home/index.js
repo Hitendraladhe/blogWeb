@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import './index.css';
 import Navbar from '../Navbar';
 import Blog from '../Blog';
-import Footer from '../Footer';
+//import Footer from '../Footer';
 
 class Home extends Component{
   constructor(){
@@ -42,7 +42,7 @@ class Home extends Component{
     return (
       <div className='container' >
         <Navbar/>
-        <h3>Daily Blogs</h3>
+        <h2>Daily Blogs</h2>
         <div className="con">
           {blogs.map(each=>(
             <Link to={`/blog/${each._id}`} style={{color: "Black", textDecoration: "none"}} onClick={this.onClickBlog}>

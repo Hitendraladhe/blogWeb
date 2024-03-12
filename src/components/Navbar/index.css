@@ -65,3 +65,12 @@
     font-size: 1rem;
     color: black;
 }
+@media screen and (max-width: 700px) {
+    .lgUl{
+        margin: 13px;
+    }
+    .headingNav{
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+}

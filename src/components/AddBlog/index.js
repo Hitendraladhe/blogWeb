@@ -31,15 +31,15 @@ const AddBlog =()=>{
     return(
       <>
        <div className='formContainer'>
-         <form onSubmit={onSubmitForm}>
+         <form className='form' onSubmit={onSubmitForm}>
             <button className='back'><Link to='/' style={{color: "White", textDecoration: "none"}}>Back</Link></button>
             <h4>Add Blog</h4>
             <label htmlFor='title'>Title</label>
-            <input onChange={onChangeHandle} id='title' name="title" />
+            <input className='input' onChange={onChangeHandle} id='title' name="title" />
             <label htmlFor='des'>Description</label>
-            <input onChange={onChangeHandle} id='des' name="des" />
-            <label htmlFor='img'>Image</label>
-            <input onChange={onChangeHandle} id='img' name="img" />
+            <input className='input' onChange={onChangeHandle} id='des' name="des" />
+            <label className='input' htmlFor='img'>Image</label>
+            <input className='input' onChange={onChangeHandle} id='img' name="img" />
             <button type='submit'>Submit</button>
          </form>
        </div>   

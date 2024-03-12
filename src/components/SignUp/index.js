@@ -30,14 +30,14 @@ const SignUp =()=>{
     return(
       <>
        <div className='formContainer'>
-         <form onSubmit={onSubmitForm}>
+         <form className='form' onSubmit={onSubmitForm}>
           <h4>Sign Up</h4>
             <label htmlFor='name'>Name</label>
-            <input onChange={onChangeHandle} id='name' name="username" />
+            <input className='input' onChange={onChangeHandle} id='name' name="username" />
             <label htmlFor='email'>Email</label>
-            <input onChange={onChangeHandle} id='email' name="email" />
+            <input className='input' onChange={onChangeHandle} id='email' name="email" />
             <label htmlFor='password'>Password</label>
-            <input onChange={onChangeHandle} id='password' name="password" />
+            <input className='input' onChange={onChangeHandle} id='password' name="password" />
             <button type='submit'>Submit</button>
             <h6><Link to='/login' className='Link' style={{color: "Black", textDecoration: "none"}}>Log In for regular User</Link></h6>
          </form>

@@ -13,3 +13,17 @@
   height: 100%;
   width: 100vw;
 }
+.editBtn{
+  margin: .5rem;
+  font-size: 2rem;
+  background-color: green;
+  color: #fff;
+  border: none;
+}
+.deleteBtn{
+  color: #fff;
+  margin: .5rem;
+  font-size: 2rem;
+  background-color: red;
+  border: none;
+}

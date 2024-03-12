@@ -1,16 +1,20 @@
-import React, {useState} from 'react'
-import { useParams, Link } from 'react-router-dom'
+import React, {useEffect, useState} from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import './index.css'
 
 const EditBlog =()=>{
+  const navigate = useNavigate()
   const [blog, setBlog] = useState()
+  const [data, setData] = useState()
   const users = {
     title: "",
-    des: "",
-    img: ""
+    des: "kakaka",
+    img: "hahahah"
   }
 
   const {id} = useParams()
+  console.log(id);
+  
 
   const onChangeHandle=(event)=>{
     const {name, value} = event.target
@@ -19,24 +23,25 @@ const EditBlog =()=>{
     
   }
 
-  const onSubmitForm=(e)=>{
+  const onSubmitForm=async (e)=>{
     e.preventDefault()
-    fetch(`https://blogbackend-2.onrender.com/AllBlogs/${id}`, {method: "POST", body: JSON.stringify(blog), headers:{'Content-Type': 'application/json'}});
+    await fetch(`https://blogbackend-2.onrender.com/AllBlogs/edit/${id}`, {method: "POST", body: JSON.stringify(blog), headers:{'Content-Type': 'application/json'}});
     console.log(blog);
+    navigate('/')
   }
 
     return(
       <>
        <div className='formContainer'>
          <form onSubmit={onSubmitForm}>
-            <button className='back'><Link to={`/blog/:${id}s`} style={{color: "White", textDecoration: "none"}}>Back</Link></button>
+            <button className='back'><Link to={`/blog/:${id}`} style={{color: "White", textDecoration: "none"}}>Back</Link></button>
           <h4>Edit Blog</h4>
             <label htmlFor='title'>Title</label>
             <input onChange={onChangeHandle} id='title' name="title" />
             <label htmlFor='des'>Description</label>
-            <input onChange={onChangeHandle} id='des' name="des" />
+            <input onChange={onChangeHandle} id='des'  name="des" />
             <label htmlFor='img'>Image</label>
-            <input onChange={onChangeHandle} id='img' name="img" />
+            <input onChange={onChangeHandle} id='img'  name="img" />
             <button type='submit'>Submit</button>
          </form>
        </div>   

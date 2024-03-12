@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import { useParams, Link } from 'react-router-dom';
 //import Footer from '../Footer'; 
+import { FaEdit } from "react-icons/fa";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 const Blog = () => {
     const [data, setData] = useState({});
@@ -44,8 +46,8 @@ const Blog = () => {
             <img src={blogData.img} className='blog-img' alt='blog-img' />
             <h3>Blog Title: {blogData.title}</h3>
             <div className='btnConBlog'>
-                <button ><Link to={`/blog/editBlog/${id}/`} style={{color: "Black", textDecoration: "none"}}>Edit</Link></button>
-                <button onClick={(()=>onDeleteClick(id))}><Link to='/'>Delete</Link></button>
+                <button className='editBtn'><Link to={`/blog/editBlog/${id}/`} className='editBtn' style={{color: "Black", textDecoration: "none"}}><FaEdit /></Link></button>
+                <button className='deleteBtn' onClick={(()=>onDeleteClick(id))}><Link to='/' className='deleteBtn'><RiDeleteBin2Fill/></Link></button>
             </div>
             <p>{blogData.des}</p>
             <h5>Blog By: {data.username}</h5>

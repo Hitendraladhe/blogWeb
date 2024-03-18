@@ -1,3 +1,13 @@
+published link :- 
+  "https://hitenblogs.netlify.app/login"
+
+for small devices:-
+  "https://drive.google.com/file/d/10IpmVjnO5gYyM_sv86DDrAhDSVcYx8w6/view?usp=drivesdk"
+
+for larger devices:- 
+  "https://drive.google.com/file/d/10EhegPHKHEztfwE6HWNG1DuMiznr8bp4/view?usp=drivesdk"
+
+
 Happpy to share my new Blog App Food Recipes
 
 Technologies used in building that Applicaion 
